@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="max-w-4xl mx-auto p-4">
+        <header class="text-center bg-blue-600 text-white py-4 rounded shadow-lg mb-6">
+            <h1 class="text-3xl font-bold">Weather Dashboard</h1>
+        </header>
+        <main>
+            <section class="bg-white p-6 rounded shadow-lg mb-6">
+                <div class="text-center mb-4">
+                    <input type="text" id="city" placeholder="Enter a City Name (E.g., New York, London, Tokyo)" 
+                        class="border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div class="flex justify-center gap-4 mt-4">
+                        <button id="searchButton" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Search</button>
+                        <span class="text-gray-500 font-semibold">or</span>
+                        <button id="currentLocationButton" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Use Current Location</button>
+                    </div>
+                </div>
+                <div id="weatherInfo" class="hidden bg-gray-50 p-4 rounded">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h2 id="cityName" class="text-xl font-semibold"></h2>
+                            <p id="currentDate" class="text-sm text-gray-500"></p>
+                        </div>
+                        <img id="weatherIcon" alt="Weather Icon" class="w-12 h-12">
+                    </div>
+                    <p id="temperature" class="text-lg font-medium"></p>
+                    <p id="windSpeed" class="text-sm text-gray-600"></p>
+                    <p id="humidity" class="text-sm text-gray-600"></p>
+                    <p id="weatherDescription" class="italic text-gray-600"></p>
+                </div>
+            </section>
+
+            <section id="forecast" class="hidden bg-white p-6 rounded shadow-lg">
+                <h3 class="text-lg font-semibold mb-4">5-Day Forecast</h3>
+                <div id="forecastContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <!-- Forecast cards go here -->
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
